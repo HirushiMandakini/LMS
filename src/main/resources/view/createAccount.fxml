@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="508.0" prefWidth="415.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.CreateAccountController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="152.0" layoutY="379.0" onAction="#loginOnAction" prefHeight="36.0" prefWidth="98.0" style="-fx-background-color: #1877F2; -fx-background-radius: 10;" text="Sign Up" textFill="WHITE" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="379.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Text fill="#1877f2" fontSmoothingType="LCD" layoutX="112.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up" wrappingWidth="188.37628173828125">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Text>
+      <Pane layoutX="57.0" layoutY="162.0" prefHeight="45.0" prefWidth="309.0" style="-fx-border-color: gray; -fx-border-radius: 5;">
+         <children>
+            <JFXTextField fx:id="txtName" focusColor="#1877f2" layoutX="16.0" layoutY="-1.0" onAction="#nameOnAction" prefHeight="45.0" prefWidth="262.0" promptText="User Name" unFocusColor="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="57.0" layoutY="257.0" prefHeight="45.0" prefWidth="309.0" style="-fx-border-color: gray; -fx-border-radius: 5;">
+         <children>
+            <JFXTextField fx:id="txtPassword" focusColor="#1877f2" layoutX="16.0" layoutY="-1.0" onAction="#passwordOnAction" prefHeight="45.0" prefWidth="262.0" promptText="Password" unFocusColor="WHITE" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="362.0" layoutY="10.0" onMouseClicked="#closeOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-close-208.png" />
+         </image>
+      </ImageView>
+      <Text fill="#0d00ff" layoutX="59.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Id :" wrappingWidth="89.4000244140625">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtId" fill="#36a420" layoutX="152.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B001" wrappingWidth="74.20001220703125">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
