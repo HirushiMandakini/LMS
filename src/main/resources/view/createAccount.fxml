@@ -9,42 +9,55 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="508.0" prefWidth="415.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.CreateAccountController">
+<AnchorPane prefHeight="634.0" prefWidth="467.0" style="-fx-background-color: #D9EDBF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.CreateAccountController">
    <children>
-      <JFXButton buttonType="RAISED" layoutX="152.0" layoutY="379.0" onAction="#loginOnAction" prefHeight="36.0" prefWidth="98.0" style="-fx-background-color: #1877F2; -fx-background-radius: 10;" text="Sign Up" textFill="WHITE" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="379.0">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </JFXButton>
-      <Text fill="#1877f2" fontSmoothingType="LCD" layoutX="112.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up" wrappingWidth="188.37628173828125">
-         <font>
-            <Font name="System Bold" size="49.0" />
-         </font>
-      </Text>
-      <Pane layoutX="57.0" layoutY="162.0" prefHeight="45.0" prefWidth="309.0" style="-fx-border-color: gray; -fx-border-radius: 5;">
+      <AnchorPane layoutX="28.0" layoutY="27.0" prefHeight="582.0" prefWidth="408.0" style="-fx-background-color: #A7D397; -fx-background-radius: 20;">
          <children>
-            <JFXTextField fx:id="txtName" focusColor="#1877f2" layoutX="16.0" layoutY="-1.0" onAction="#nameOnAction" prefHeight="45.0" prefWidth="262.0" promptText="User Name" unFocusColor="WHITE" />
+            <ImageView fitHeight="214.0" fitWidth="215.0" layoutX="97.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/approved.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="115.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGN UP" wrappingWidth="177.13671875">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <Pane layoutX="43.0" layoutY="371.0" prefHeight="45.0" prefWidth="309.0" style="-fx-border-color: gray; -fx-border-radius: 5;">
+               <children>
+                  <JFXTextField fx:id="txtName" focusColor="#1877f2" layoutX="16.0" layoutY="-1.0" onAction="#nameOnAction" prefHeight="38.0" prefWidth="262.0" promptText="User Name" unFocusColor="WHITE" />
+               </children>
+            </Pane>
+            <Pane layoutX="43.0" layoutY="438.0" prefHeight="45.0" prefWidth="309.0" style="-fx-border-color: gray; -fx-border-radius: 5;">
+               <children>
+                  <JFXTextField fx:id="txtPassword" focusColor="#1877f2" layoutX="16.0" layoutY="-1.0" onAction="#passwordOnAction" prefHeight="38.0" prefWidth="262.0" promptText="Password" unFocusColor="WHITE" />
+               </children>
+            </Pane>
+            <JFXButton buttonType="RAISED" layoutX="134.0" layoutY="509.0" onAction="#loginOnAction" prefHeight="38.0" prefWidth="127.0" style="-fx-background-color: #89B9AD; -fx-background-radius: 10;" text="Sign Up" textFill="WHITE" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="147.0" AnchorPane.topAnchor="509.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <Text fill="#43766c" layoutX="29.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Id :" wrappingWidth="89.4000244140625">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtId" fill="#36a420" layoutX="124.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B001" wrappingWidth="74.20001220703125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="326.0" layoutY="27.0" prefHeight="53.0" prefWidth="53.0" style="-fx-background-color: #96C291; -fx-background-radius: 15;">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#closeOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-close-208.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
          </children>
-      </Pane>
-      <Pane layoutX="57.0" layoutY="257.0" prefHeight="45.0" prefWidth="309.0" style="-fx-border-color: gray; -fx-border-radius: 5;">
-         <children>
-            <JFXTextField fx:id="txtPassword" focusColor="#1877f2" layoutX="16.0" layoutY="-1.0" onAction="#passwordOnAction" prefHeight="45.0" prefWidth="262.0" promptText="Password" unFocusColor="WHITE" />
-         </children>
-      </Pane>
-      <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="362.0" layoutY="10.0" onMouseClicked="#closeOnAction" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/icons8-close-208.png" />
-         </image>
-      </ImageView>
-      <Text fill="#0d00ff" layoutX="59.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Id :" wrappingWidth="89.4000244140625">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Text fx:id="txtId" fill="#36a420" layoutX="152.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B001" wrappingWidth="74.20001220703125">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
+      </AnchorPane>
    </children>
 </AnchorPane>
